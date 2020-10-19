@@ -1,0 +1,39 @@
+This project relies on knowledge of Raspberry Pi, Python and Basic Electricty.  It is the last part 
+that all precautions must be taken.  If you do not have experience with electricty do not attempt this project.
+
+Parts needed: 
+1.) A working Raspberry Pi loaded with Raspbian and running or able to run at least python 2.7 which 
+is what I wrote this on so I know it works with that version.  
+2.) A PIR Sensor  - I used this but was able to only buy 1 , not the 3 pack:
+  https://www.amazon.com/HiLetgo-HC-SR501-Infrared-Sensor-Arduino/dp/B07KZW86YR/ref=sr_1_5?dchild=1&keywords=pir+sensor+raspberry+pi&qid=1603144981&sr=8-5
+3.) Pi Relay HAT - I used this one and liked that the pins were still available to be used on top
+    And the fact that it was capable of taking 15 Amps at 120 V DC
+  https://www.amazon.com/Raspberry-Pi-Expansion-Module-XYGStudy/dp/B01G05KLIE/ref=sr_1_3?dchild=1&keywords=pi+relay+hat&qid=1603145086&sr=8-3
+4.) Something to turn off or on (I chose a strobe light for Halloween)
+5.) An External speaker - I just used one that I knew had a mini (headphone jack) type wire
+so that I could plug it into my raspberry pi
+6.) An old extension chord is best - This is what is needed to wire into the relay
+and requires knowledge of 120 V AC electricty such as what is found in the common US Home.
+
+Put everything together.... Google it ....  Most of this can be found very easily online, just 
+make sure to not use the same pins that the relay is using for the PIR sensor.  
+I used BCM Pin mapping and PIN 23 for my PIR Sensor, and the relay comes pre-configured on BCM PINs
+26, 21 and 20.  for my project I am only using one relay the one configured on PIN 21.
+
+Then I cut an old extension chord.  I decided to put a shorter end with the plug as the input to the board
+(raspberry pi) becuase it would also require a power chord, and left a bit longer end as the other side, so 
+that I could put the scary light someplace a little farter away.  You could however make them both shorter and
+use extensions chords on both ends as needed... just decide what you think will be best for your project.  
+
+I then took the 'hot' wire - (Black) from the male end and wired it into one side of my N/O Relay circuit.  
+I took the other Hot (black) from the female end, and wired it into the other side of my N/O relay circuit.  Then I 
+tied the two neutrals (white) and grounds (green or bare copper) together to each other,... white to white and 
+ground to ground.    If you were able to fit it in, you could theoratically NOT CUT the neutral or ground wires
+on your extension chord.  
+
+Once the relay is wired and the code is built, I plugged everything in and waited for sparks or smoking wires
+Not seeing either one I proceeded to login to the pi and run the halloween2020.py code, testin the PIR sensor.  
+I find the sensor is very good, and therefore pretty sensitive, so I built a little cardboard cutout to create a smaller
+"kill zone".  By narrowing the field the PIR sensor can see.  
+
+Turn it on and have fun scarring little kids that come by the house for Halloween.
