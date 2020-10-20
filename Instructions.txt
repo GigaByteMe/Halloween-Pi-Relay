@@ -1,6 +1,14 @@
 This project relies on knowledge of Raspberry Pi, Python and Basic Electricty.  It is the last part 
 that all precautions must be taken.  If you do not have experience with electricty do not attempt this project.
 
+My background:  I am a computer programmer and have been writing code in one way or another since I was a kid...
+(I was born in 1970!)....  I have a basic understanding of home electricity and have installed outlets, lights, switches, 
+etc in my home many times.  I have a background in EET (Electical Engineering Technology) and took various EE classes 
+at Purdue University.  So I have been making LEDs light up using a bread board and circuit gates since the 90s.  I don't 
+feel that you need ALL of this knowledge in order to complete this project, however, an understanding of these things
+is a plus and again.... if you don't feel comfortable with Electirciy, don't attempt this project.
+-- GigagByteMe
+
 Parts needed: 
 1.) A working Raspberry Pi loaded with Raspbian and running or able to run at least python 2.7 which 
 is what I wrote this on so I know it works with that version.  
@@ -25,7 +33,15 @@ Then I cut an old extension chord.  I decided to put a shorter end with the plug
 that I could put the scary light someplace a little farter away.  You could however make them both shorter and
 use extensions chords on both ends as needed... just decide what you think will be best for your project.  
 
-I then took the 'hot' wire - (Black) from the male end and wired it into one side of my N/O Relay circuit.  
+A quick overview of relays:
+You can wire a relay in one of two ways.  Normally Open - N/O or Normally Closed - N/C
+Normally Open means that when the relay is in passive (not activated) mode - the circuit will be open, meaning
+power will not be able to pass through the relay while the circuit is open.
+Vise versa if you wire in Normally Closed in passive mode the circuit will be closed.  Meaning power will be running 
+through the relay.
+I just picked N/O - but if you look at the notes in my codes, when I rewire this someday, I would switch this to N/C.
+
+so, I took the 'hot' wire - (Black) from the male end and wired it into one side of my N/O Relay circuit.  
 I took the other Hot (black) from the female end, and wired it into the other side of my N/O relay circuit.  Then I 
 tied the two neutrals (white) and grounds (green or bare copper) together to each other,... white to white and 
 ground to ground.    If you were able to fit it in, you could theoratically NOT CUT the neutral or ground wires
